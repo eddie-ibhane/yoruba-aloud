@@ -119,6 +119,37 @@
                 </div>
             </div>
 
+            <!-- CATEGORIES -->
+
+            <!-- <div class="row"></div> -->
+            <div class="row add-category">
+                <div class="add-cat-form col-lg-6 col-md-6 col-sm-12" >
+                    <div class="card-body">
+                        <h3>Add Categories</h3>
+                        <form id="formId">
+                            <label>Categories</label>
+                            <input type="text" name="categories" placeholder="Enter Categories Here" id="categories">
+                            <label for="">Category Images</label>
+                            <input type="file" name="image" id="cat-img">
+                            <input onclick="createCategories(event)" type="button" value="Create Categories" id="btn-submit">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="scroll-bg col-lg-6 col-md-6 col-sm-12">
+                    <div class="scroll-div ">
+                        <!-- <div class="search-card">
+                            <img src="/images/yorubalogo.png" alt="">
+                            <button class="update-button">Update</button>
+                            <button class="delete-button" >Delete</button>
+                        </div> -->
+                    <!-- </div>
+                </div>
+            </div>             -->
+
+
+            <!-- TABLE -->
+
             <div class="outer-wrapper mt-5">
                 <div class="table-wrapper">
                     <table class="table">
@@ -132,11 +163,18 @@
                             </tr>
                         </thead>
                         <tbody id="table-id">
-
+                            <!-- <tr>
+                                <td>Name</td>
+                                <td>Email</td>
+                                <td>Phone Number</td>
+                                <td>Postion</td>
+                                <td>Total score</td>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
             </div>
+
             <div id="dash-modal" class="mymodal">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -148,12 +186,66 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Page Modal for update -->
+            <!-- <div id="updateModal" class="mymodal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                     <h2>Update Category</h2>
+                        <span class="close" onclick="closeUpdateModal()">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="add-cat-form " >
+                            <div class="card-body">
+                                <form action="">
+                                    <label>Categories</label>
+                                    <input type="text" name="categories"  id="updateName">
+                                    <label for="">Category Images</label>
+                                    <input type="file" name="image" id="updateNameImage">
+                                    <input onclick="updateCategory(catId)" type="button" value="Create Categories" id="btn-submit">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div id="my-modal3" class="mymodal2">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Update Category</h2>
+                        <span class="close" onclick="closeModal3()">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-right">
+                            <button class="ch-btn" onclick="chooseImg()">change image</button>
+                        </div>
+                        <form id="updForm">
+                            <label for="updateName" class="font-mulish font-size-14 font-weight-600">Category Name</label>
+                            <input type="text" name="updateName" id="updateName" class="input mb-3" placeholder="Enter Categories Name Here">
+                            <div class="getWrapp">
+                                <label for="updateName" class="font-mulish font-size-14 font-weight-600">Category Image link</label>
+                                <input type="text" name="updateName" id="updateNameImage" class="input mb-3" placeholder="Enter Categories Name Here">
+                            </div>
+                            <div class="wrapper">
+                                <label for="updateImage" class="font-mulish font-size-14 font-weight-600">Category Images</label>
+                                <input type="file" name="updateImage" id="updateImage" class="input mb-3" placeholder="Enter Categories Image Here">
+                            </div>
+                            <button class="button button-blue font-weight-700" onclick="updateCategory(event)">
+                                <div class="spinner-border spinner-border-sm text-light spin spin2" role="status">
+                                    <span class="sr-only"></span>
+                                </div>
+                                Update Category
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
        </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
+
     <!-- Custom Javascript -->
     <script src="index.js"></script>
     <script src="oauth.js"></script>

@@ -403,7 +403,25 @@ table td {
     
 }
 
+.add-cat-form .card-body {
+    width: 100%;
+}
+
+.add-cat-form h3 {
+    margin: 100px 0px 0px 80px;
+}
+
+.add-cat-form input {
+    margin-bottom: 25px;
+}
+
+#btn-submit {
+    background-color: #2D85DE;
+    color: #ffffff;
+}
+
 .scroll-bg {
+    width: 100px;
     margin: 10% auto;
     padding: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -424,7 +442,8 @@ table td {
 }
 
 .search-card img {
-    width: 100%
+    width: 100%;
+    max-height: auto;
 }
 
 .delete-button, .update-button {
@@ -444,6 +463,18 @@ table td {
 
 
 .mymodal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mymodal2 {
     display: none;
     position: fixed;
     z-index: 1;
@@ -556,14 +587,16 @@ table td {
     box-sizing: border-box;
 }
 
-/* .subItems {
-    display: flex;
-} */
+.subItems img{
+    /* display: flex; */
+    width: 100%;
+    height: auto;
+}
 
 
 @media screen and (max-width: 850px) {
     .subItems {
-        flex-direction: column;
+        /* flex-direction: column; */
     }
 
     .subForm {
@@ -906,3 +939,17 @@ nav img {
     border-radius: 25px;
     margin-top: 40px;
 }
+
+/* .student-card {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+.swichItem {
+    float: right;
+} */
