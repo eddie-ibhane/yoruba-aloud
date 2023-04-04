@@ -172,9 +172,9 @@ function dashboardApi(){
 dashboardApi();
 
 function studentModal(){
-    const myModal = document.querySelector(".mymodal");
+    const myModal = document.querySelector(".mymodal2");
     myModal.style.display = "block";
-
+    
     const myPageModal = document.querySelector(".pagemodal");
     myPageModal.style.display = "block";
 
@@ -198,9 +198,7 @@ function studentModal(){
     fetch(url, req)
     .then(response => response.json())
     .then(result => {
-        // console.log(result)
         result.map((data)=>{
-            // console.log(data);
             if(dataItem.length >= 0){
                 dataItem += `
                 <div class="student-card">
@@ -230,7 +228,7 @@ function studentModal(){
 // studentModal();
 
 function closeDashModal(){
-    const myModal = document.querySelector(".mymodal");
+    const myModal = document.querySelector(".mymodal2");
     myModal.style.display = "none";
 }
 
@@ -351,6 +349,9 @@ function createCategories(event){
 }
 
 function displayCat(){
+    const myPageModal = document.querySelector(".pagemodal");
+    myPageModal.style.display = "block";
+
     const myToken = localStorage.getItem("admin");
     const theToken = JSON.parse(myToken);
     const token = theToken.token;
@@ -398,7 +399,7 @@ function displayCat(){
                     confirmedButtonColor: '#2D85DE'
                 })
             }
-
+            myPageModal.style.display = "none";
         })
     })
     .catch(error => console.log('error', error));
@@ -414,7 +415,7 @@ function displayCategoryForm(myId){
     localStorage.setItem("un", myId);
 
      // Display modal
-    const displayModal = document.querySelector(".mymodal2");
+    const displayModal = document.querySelector(".mymodal");
     displayModal.style.display = "block";
 
     const myToken = localStorage.getItem("admin");
@@ -436,7 +437,7 @@ function displayCategoryForm(myId){
         fetch(url, requestOptions)
         .then(response => response.json())
         .then(result => {
-            console.log(result)
+            // console.log(result)
 
             const getUpName = document.getElementById("updateName");
             const getUpName2 = document.getElementById("updateNameImage");
@@ -707,7 +708,7 @@ function deleteCategory(myid) {
 }
 
 function closeModal3(){
-    const displayModal = document.querySelector(".mymodal2");
+    const displayModal = document.querySelector(".mymodal");
     displayModal.style.display = "none";
 }
 
