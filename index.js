@@ -448,39 +448,16 @@ function displayCategoryForm(myId){
         .catch(error => console.log('error', error));
 }
 
+function chooseImg(event) {
+    event.preventDefault();
+    
+    const div1 = document.querySelector(".getWrapp")
+    const div2 = document.querySelector(".wrapper")
 
-// function updateCategory(catId){
-//     // Get token from storage
-//     const getToken = localStorage.getItem('admin');
-//     const token = JSON.parse(getToken);
-//     const myToken = token.token;
+    div1.style.display = "none";
+    div2.style.display = "block";
+}
 
-//     const myHeaders = new Headers();
-//     myHeaders.append("Authorization", `Bearer ${myToken}`);
-
-//     //get values from input
-//     const getCat = document.getElementById("updateName").value;
-//     const getCatImg = document.getElementById("updateNameImage").files[0];
-
-//     const formdata = new FormData();
-//     formdata.append("name", getCat);
-//     formdata.append("image", getCatImg);
-//     formdata.append("image", getCatImg2);
-//     formdata.append("category_id", getId);
-
-//     const requestOptions = {
-//         method: 'GET',
-//         headers: myHeaders,
-//         body: formdata
-//     };
-
-//     const url = `https://pluralcodesandbox.com/yorubalearning/api/admin/update_category/${catId}`;
-
-//     fetch(url, requestOptions)
-//     .then(response => response.json())
-//     .then(result => console.log(result))
-//     .catch(error => console.log('error', error));
-// }
 function updateCategory(event) {
     event.preventDefault();
 
