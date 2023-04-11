@@ -32,7 +32,7 @@ form {
     width: 70%;
     margin: 5% auto;
     background: transparent;
-    padding: 35px;
+    padding: 32px;
     border-radius: 15px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
@@ -63,11 +63,14 @@ input, input:focus {
     border: none;
     font-family: "Short Stack", sans-serif;
 }
-
-@media screen and (max-width: 650px) {
+@media screen and (max-width:768px) {
     form {
         width: 100%;
+        padding: 16px;
     }
+}
+@media screen and (max-width: 650px) {
+    
 
     .sign-img {
         height: 305px;
@@ -403,16 +406,31 @@ table td {
     
 }
 
+.add-cat-form {
+    margin-top: 62px;
+}
 .add-cat-form .card-body {
     width: 100%;
 }
 
-.add-cat-form h3 {
-    margin: 100px 0px 0px 80px;
+
+.add-cat-form h2 {
+    margin: 32px auto;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 900;
+    color: #2D85DE;
+    /* padding: 0 64px; */
 }
 
 .add-cat-form input {
     margin-bottom: 25px;
+}
+
+@media screen and (max-width:768px) {
+    .add-cat-form h2 {
+        font-size: 24px;
+    }
 }
 
 #btn-submit {
@@ -421,7 +439,7 @@ table td {
 }
 
 .scroll-bg {
-    width: 100px;
+    /* width: 100px; */
     margin: 10% auto;
     padding: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -461,7 +479,13 @@ table td {
     background-color: #2D85DE;
 }
 
-
+@media screen and (max-width: 360px) {
+    .update-button,.delete-button {
+        /* margin: 16px 0; */
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+}
 .mymodal {
     display: none;
     position: fixed;
